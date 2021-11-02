@@ -1,0 +1,69 @@
+#Video Link: https://www.youtube.com/watch?v=-QBuVBhjEEM
+
+To run program without test files:
+ - Excecute Chatserver.py file for the server.
+ - Excecute Main.py without a parameter for the client.
+
+To run program with test files:
+ - Excecute Chatserver.py file for the server.
+ - Excecute Main.py with one parameter of the path to the test file (such as "tests\test1.txt")
+ - Note: Every line represents a send message to  the server, so the first 2 lines should be the first the host and then the port,
+	 the other 3 lines should be for logging in the user with the /user, /pass, and /nick commands, and any other line after is to call the other commands
+ - !Note!: Test file does not work properly for updating and changing the GUI of the client, but the command do get pass correctly to the server.
+ - !Note!: If many certain commands are called fast, the server might not respond properly. The /quit command does not properly work in test mode.
+
+To connect a client to server simple press the connect button and type:
+ - localHost for host
+ - 12900 for port
+
+Then to log in to server use this commands to log in or create a new user:
+ - /pass [password] for inputing the password (if username exist it will check for correct password)
+ - /nick [nickname] for inputing the nickname (no duplicates)
+ - /user [username] [realname] for inputing username and realname
+Once all information is inputed it will check if user can be found in user.txt,
+here it will check for correct password and if user is banned.
+
+If user is new, or user exist and correct password and not banned, then user would be logged
+in to chat server. Here use /help to see all the commands that can be called to use the server.
+
+There is no tab for channels, but to implement multiple channels I created two new commands:
+/mychannels to display the channel's the user is in and
+/change [channel] to change the currently viewing channel.
+
+How to run  the commands:
+/away [message]                     - If message is inputed, when user recieves a private message, the sender will recieve the away status message back, to remove simply call away command withou message.
+/connect [targetServer] [port]      - Connect to a server with thet targetServer name and ports.[Notimplemented]
+/change [channel]                   - !*New command implemented*!: To change current viewable changels from the list of change's user is currently in.
+/die                                - Server shuts down (Admin only).
+/help                               - Show the instructions.
+/info                               - Provides information about server.
+/invite [nickname] [channel]        - Invites a user with matching nickname to a channel with matching channel name, sender most be a member of the channel.
+/ison [nickname1 nickname2 ...}     - Returns the nickname of the users who have matching nickname and are on the server. Can enter multiple at once, seperated by spaces.
+/join [channel_name] [password]     - To create a new channel or try to join an existing channel with the correct password.
+/kick [channel] [username]          - Removes user from channel (Channel operator only).
+/kill [username]                    - Removes user from network (IRC/Admin operator only).
+/knock [channel] [message]          - To send a notice and an optional message to a channel.
+/quit                               - Exits the program.
+/list                               - Lists all available channels.
+/usermode [nickname] [flags]        - Changes the mode on the user that matches the nickname, for invisible mode or system operator mode, + to activate, - to deactivate. Multiple seperated by spaces. Flags: +i to make user invisible so they can't be seen by /who, /whois, /users, /userhost, or /ison; +o or +w or +s to make them server operator and recieve wallops messages.
+/channelmode [channel][input][flags]- Changes the mode on the channel that matches the channel name, input is to specify a user or give an input depending on the flag run. Multiple seperated by spaces. Note that this means multiple lines of this command would be needed to use mode that require different input. Multiple seperated by spaces. Flags: +o make a user a channel operator; +p make channel private (no outside user can enter); +s make channel secret so it won't show in /list but can still be interacted with; +i makes channel invite-only so user can only enter through invites; +t makes only channel operatos capable of changing the channel topic; +n makes channel be in no-outside-mode so no notices from knocks will show; l [input=maximum] changes the maximum number of users in a channel, it won't kick users, but once limit is reach it won't allow more users to enter; +k [input=password] changes the password of the channel to the inputed one, or use - to remove the password.
+/mychannels                         - !*New command implemented*!: To display all channel's user is currently on.
+/nick [nickname]                    - Set up user's nickname (no duplicates).
+/oper [username] [password]         - Turns user with the matching username and password into a sysop, except if they are admin.
+/part [channel1,channel2,][message] - Exit list of channels (separated by a comma) with an optional parting message.
+/ping <server1> [server2]           - Sends a ping to server1, and get a pong reply if online, pass on to server2 if specified.
+/pong <server1> [server2]           - Sends a pong to server1, and get a ping reply if online, pass on to server2 if specified.
+/privmsg [target_user] [message]    - Sends a private message to target user.
+/restart                            - Server restarts (Admin only).
+/rules                              - Displays server rules.
+/setname [realname]                 - Changes user's real name.
+/silence [+/-username1...]          - Add/remove users to the ignore list by simply writing +/- to add/remove and then the username, seperated by spaces
+/time                               - Gives current time on server.
+/topic [channel] <topic>            - If topic is empty, recieve topic from channel, other wise changes channel topic.
+/userhost [nkname1 nkname2...]      - Returns information about the user who's nickname matches any of the nicknames giving (maximum of 5 nicknames separated by spaces).
+/userip [nickname]                  - Display's the IP addres of the user that matches the nickname.
+/users                              - Displays all user on server.
+/version                            - Displays the version of server.
+/wallops [message]                  - Sends a message to all operators of the server.
+/who [name] <o>                     - Returns a list of server users that match name, add the word 'o' at the end to only get operators.
+/whois [nickname1,nickname2,..]     - Returns information about the user who's nickname can be found withing any of the nicknames giving separated by commas.

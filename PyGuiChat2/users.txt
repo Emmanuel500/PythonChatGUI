@@ -1,0 +1,4 @@
+bob pass admin false
+red 12345 sysop false
+chn123 square channelop false
+ban password user true

@@ -1,0 +1,15 @@
+
+
+> bob has joined the channel me!
+bob: hello?
+bob: yes
+bob: you left
+bob: I see
+
+
+> eman has joined the channel me!
+eman: oooh
+bob: 
+
+> has left the channel me
+eman: :O

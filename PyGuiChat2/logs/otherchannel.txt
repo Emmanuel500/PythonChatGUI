@@ -1,0 +1,11 @@
+
+
+> eman has joined the channel otherchannel!
+eman: hello
+
+>eman has left the channel otherchannel
+
+
+> bob has joined the channel otherchannel!
+
+>bob has left the channel otherchannel

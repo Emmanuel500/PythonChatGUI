@@ -1,0 +1,9 @@
+localHost
+12900
+/user eman Emmanuel
+/pass passy
+/nick eman
+/list
+/join me
+Greetings
+how are you?

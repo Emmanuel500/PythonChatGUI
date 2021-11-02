@@ -1,0 +1,12 @@
+localHost
+12900
+/user bob boby
+/pass pass
+/nick nickname
+/join me
+Hello World!
+/join other passy
+lololololololooll
+/list
+/mychannels
+/die

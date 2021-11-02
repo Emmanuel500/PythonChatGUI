@@ -1,0 +1,13 @@
+
+
+> eman has joined the channel newchannel!
+eman: hello
+
+
+> bob has joined the channel newchannel!
+bob: Hi
+bob: privmsg eman This is a private message
+
+>eman has left the channel newchannel
+
+>bob has left the channel newchannel

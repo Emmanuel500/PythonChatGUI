@@ -1,0 +1,13 @@
+
+
+> bob has joined the channel exchannel!
+
+
+> eman has joined the channel exchannel!
+eman: hello
+bob: 
+
+>bob has left the channel exchannel
+bob: NOTICE: This si a knock
+
+>eman has left the channel exchannel

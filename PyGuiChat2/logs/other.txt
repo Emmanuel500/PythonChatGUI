@@ -1,0 +1,13 @@
+
+
+> bob has joined the channel other!
+bob: hi
+bob: how are you?
+: 
+> bob has left the channel other
+
+
+> bob has joined the channel other!
+bob: I see
+: 
+> bob has left the channel other
